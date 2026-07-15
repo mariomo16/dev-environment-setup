@@ -1,0 +1,9 @@
+{
+	"$schema": "https://raw.githubusercontent.com/angular/angular-cli/main/packages/angular/cli/lib/config/workspace-schema.json",
+	"cli": {
+		"packageManager": "pnpm",
+		"analytics": false
+	},
+	"version": 1,
+	"projects": {}
+}
