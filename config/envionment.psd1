@@ -8,7 +8,7 @@
         # @{ Name = 'GIT_CONFIG_GLOBAL'; Value = 'C:\Dev\Config\.gitconfig'; Scope = 'User' }
         # @{ Name = 'LESSHISTFILE'; Value = 'C:\Dev\Config\.lesshst'; Scope = 'User' }
         # @{ Name = 'NPM_CONFIG_USERCONFIG'; Value = 'C:\Dev\Config\.npmrc'; Scope = 'User' }
-        # @{ Name = 'PNPM_HOME'; Value = 'C:\Dev\Config\pnpm'; Scope = 'User' }
+        @{ Name = 'PNPM_HOME'; Value = 'C:\Dev\Tools\pnpm'; Scope = 'User' }
         # C:\Users\mario\AppData\Local\pnpm\config\rc
     )
 
