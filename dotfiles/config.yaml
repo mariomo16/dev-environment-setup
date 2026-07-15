@@ -1,0 +1,5 @@
+globalBinDir: C:\Dev\Tools\nodejs\npm-global
+storeDir: C:\Dev\Tools\pnpm\store
+globalDir: C:\Dev\Tools\pnpm\data
+cacheDir: C:\Dev\Tools\pnpm\cache
+stateDir: C:\Dev\Tools\pnpm\state
