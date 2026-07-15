@@ -16,7 +16,7 @@
         # Node.js
         @{ Path = 'C:\Dev\Tools\nodejs'; Scope = 'User' }
         @{ Path = 'C:\Dev\Tools\nodejs\npm-global'; Scope = 'User' }
-        # @{ Path = '%PNPM_HOME%'; Scope = 'User' }
+        @{ Path = '%PNPM_HOME%'; Scope = 'User' }
 
         # PHP
         @{ Path = 'C:\Dev\Tools\php'; Scope = 'User' }
