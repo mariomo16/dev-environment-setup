@@ -12,10 +12,10 @@
             Source = 'dotfiles\config.yaml'
             Target = '{0}\Local\pnpm\config\config.yaml' -f $env:LOCALAPPDATA
         }
-        @{
-            Source = 'dotfiles\Microsoft.PowerShell_profile.ps1'
-            Target = $PROFILE
-        }
+        # @{
+        #     Source = 'dotfiles\Microsoft.PowerShell_profile.ps1'
+        #     Target = $PROFILE
+        # }
         @{
             Source = 'dotfiles\.lesshst'
             Target = '{0}\.lesshst' -f $env:USERPROFILE
