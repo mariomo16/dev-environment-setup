@@ -1,0 +1,1 @@
+# Funciones compartidas (logging, test-admin, etc.)

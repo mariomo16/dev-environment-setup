@@ -1,0 +1,1 @@
+# Lista de carpetas a crear (datos, no lógica)
