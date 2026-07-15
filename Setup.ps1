@@ -2,7 +2,8 @@
 [CmdletBinding(SupportsShouldProcess)]
 param(
     [string]$ConfigPath = (Join-Path $PSScriptRoot 'config'),
-    [string]$ScriptsPath = (Join-Path $PSScriptRoot 'scripts')
+    [string]$ScriptsPath = (Join-Path $PSScriptRoot 'scripts'),
+    [string]$RepoRoot = $PSScriptRoot
 )
 
 $ErrorActionPreference = 'Stop'
@@ -16,6 +17,7 @@ try {
 
     $directoriesConfig = Import-PowerShellDataFile -Path (Join-Path $ConfigPath 'directories.psd1')
     $environmentConfig = Import-PowerShellDataFile -Path (Join-Path $ConfigPath 'environment.psd1')
+    $symlinksConfig = Import-PowerShellDataFile -Path (Join-Path $ConfigPath 'symlinks.psd1')
 
     $requiresElevation = Test-ElevationRequired -EnvironmentConfig $environmentConfig
     if ($requiresElevation -and -not (Test-IsAdministrator)) {
@@ -27,6 +29,8 @@ try {
     & (Join-Path $ScriptsPath 'Set-EnvironmentVariables.ps1') -Variables $environmentConfig.Variables
 
     & (Join-Path $ScriptsPath 'Set-PathEntries.ps1') -Entries $environmentConfig.PathEntries
+
+    & (Join-Path $ScriptsPath 'New-SymbolicLinks.ps1') -Symlinks $symlinksConfig.Symlinks -RepoRoot $RepoRoot
 
     Write-SetupLog -Message 'Setup completed successfully' -Level Success
 }
